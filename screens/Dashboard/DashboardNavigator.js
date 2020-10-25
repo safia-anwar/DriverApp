@@ -20,7 +20,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createStackNavigator } from 'react-navigation-stack';
 
 
-import { LoginScreen } from '../LoginScreen';
+import { Logout } from '../Logout';
 
 //Import all the screens
 
@@ -138,7 +138,7 @@ const Screen4_StackNavigator = createStackNavigator({
 // const Logout_StackNavigator = createStackNavigator({
 //     //All the screen from the Fifth Option will be indexed here
 //     Fifth: {
-//         screen: LoginScreen,
+//         screen: Logout,
 //         navigationOptions: ({ navigation }) => ({
 //             title: 'Logout',
 //             headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
@@ -152,13 +152,6 @@ const Screen4_StackNavigator = createStackNavigator({
 //         }),
 //     },
 // });
-
-
-// const logout = ()=>{
-//     AsyncStorage.removeItem("token").then(()=>{
-//          this.props.navigation.replace("login")
-//      })
-// } 
 
 
 
@@ -192,7 +185,7 @@ const DrawerNavigatorExample = createDrawerNavigator(
          
         },
         NavScreen5:{
-            screen: LoginScreen,
+            screen: Logout,
             navigationOptions:{
                 drawerLabel: 'Logout'
             }

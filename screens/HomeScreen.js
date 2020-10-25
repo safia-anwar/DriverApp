@@ -9,23 +9,23 @@ import AsyncStorage from '@react-native-community/async-storage';
 import DashboardNavigator from "./Dashboard/DashboardNavigator";
 
 export const HomeScreen = (props) => {
-   const [email,setEmail] = useState("loading")
-   const Boiler = async ()=>{
-      const token = await AsyncStorage.getItem("token")
-    fetch('http://192.168.1.103:3000/',{
-    headers:new Headers({
-      Authorization:"Bearer "+token
-    })
-    }).then(res=>res.json())
-    .then(data=>{
-      console.log(data)
-      setEmail(data.email)
-    }
-    )
-   }
-useEffect(()=>{
-   Boiler()
-},[])
+//    const [email,setEmail] = useState("loading")
+//    const Boiler = async ()=>{
+//       const token = await AsyncStorage.getItem("token")
+//     fetch('http://192.168.1.103:3000/',{
+//     headers:new Headers({
+//       Authorization:"Bearer "+token
+//     })
+//     }).then(res=>res.json())
+//     .then(data=>{
+//       console.log(data)
+//       setEmail(data.email)
+//     }
+//     )
+//    }
+// useEffect(()=>{
+//    Boiler()
+// },[])
   
   // export const logout =(props)=>{
 //       AsyncStorage.removeItem("token").then(()=>{

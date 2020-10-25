@@ -26,7 +26,7 @@ export const SignupScreen = (props) => {
   const [password,setPassword]=useState('');
 
   const sendCred= async (props)=>{
-     fetch("http://192.168.1.103:3000/signup",{
+     fetch("http://192.168.1.105:3000/signup",{
        method:"POST",
        headers: {
         'Content-Type': 'application/json'

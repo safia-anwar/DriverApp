@@ -14,6 +14,7 @@ import { SignupScreen } from './screens/SignupScreen';
 import { LoginScreen } from './screens/LoginScreen';
 import { LoadingScreen } from './screens/LoadingScreen';
 import { HomeScreen } from './screens/HomeScreen';
+import { Logout } from './screens/Logout';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import DrawerNavigatorExample from "./screens/Dashboard/DashboardNavigator";
@@ -48,6 +49,7 @@ export default function App() {
         <Stack.Screen name="home" component={HomeScreen} />
         <Stack.Screen name="login" component={LoginScreen}/>
         <Stack.Screen name="signup" component={SignupScreen} />
+        <Stack.Screen name="logout" component={Logout} />
 
       </Stack.Navigator>
     </NavigationContainer>
