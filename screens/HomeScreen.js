@@ -12,7 +12,7 @@ export const HomeScreen = (props) => {
 //    const [email,setEmail] = useState("loading")
 //    const Boiler = async ()=>{
 //       const token = await AsyncStorage.getItem("token")
-//     fetch('http://192.168.1.103:3000/',{
+//     fetch('http://192.168.1.105:3000/',{
 //     headers:new Headers({
 //       Authorization:"Bearer "+token
 //     })
@@ -26,7 +26,7 @@ export const HomeScreen = (props) => {
 // useEffect(()=>{
 //    Boiler()
 // },[])
-  
+//   console.log(props);
   // export const logout =(props)=>{
 //       AsyncStorage.removeItem("token").then(()=>{
 //         props.navigation.replace("login")

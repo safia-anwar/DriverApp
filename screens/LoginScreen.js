@@ -50,7 +50,7 @@ export const LoginScreen = (props) => {
     })
  }
 
-
+ console.log(props);
 
   return ( 
     <>

@@ -21,6 +21,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 
 import { Logout } from '../Logout';
+import { LoginScreen } from '../LoginScreen';
 
 //Import all the screens
 
@@ -69,8 +70,8 @@ const FirstActivity_StackNavigator = createStackNavigator({
             headerStyle: {
                 backgroundColor: '#93278f',
                 height: 100,
-                borderBottomLeftRadius: 70,
-                borderBottomRightRadius: 70,
+                //borderBottomLeftRadius: 70,
+                //borderBottomRightRadius: 70,
 
 
             },
@@ -135,23 +136,41 @@ const Screen4_StackNavigator = createStackNavigator({
     },
 });
 
-// const Logout_StackNavigator = createStackNavigator({
-//     //All the screen from the Fifth Option will be indexed here
-//     Fifth: {
-//         screen: Logout,
-//         navigationOptions: ({ navigation }) => ({
-//             title: 'Logout',
-//             headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
-//             headerStyle: {
-//                 backgroundColor: '#93278f',
-//                 height: 100,
-//                 borderBottomLeftRadius: 70,
-//                 borderBottomRightRadius: 70,
-//             },
-//             headerTintColor: '#fff',
-//         }),
-//     },
-// });
+const Logout_StackNavigator = createStackNavigator({
+    //All the screen from the Fifth Option will be indexed here
+    Logout: {
+        screen: Logout,
+        // navigationOptions: ({ navigation }) => ({
+        //     title: 'Logout',
+        //     headerLeft: () => <NavigationDrawerStructure navigationProps={navigation} />,
+        //     headerStyle: {
+        //         backgroundColor: '#93278f',
+        //         height: 100,
+        //         borderBottomLeftRadius: 70,
+        //         borderBottomRightRadius: 70,
+        //     },
+        //     headerTintColor: '#fff',
+        // }),
+        navigationOptions: () => {
+
+            return {
+
+                headerShown: false
+            }
+        }
+    },
+
+    // Login:{
+    //     screen:LoginScreen,
+    //     navigationOptions: () => {
+
+    //         return {
+
+    //             headerShown: false
+    //         }
+    //     }
+    // },
+});
 
 
 
@@ -185,7 +204,7 @@ const DrawerNavigatorExample = createDrawerNavigator(
          
         },
         NavScreen5:{
-            screen: Logout,
+            screen: Logout_StackNavigator,
             navigationOptions:{
                 drawerLabel: 'Logout'
             }
