@@ -26,7 +26,7 @@ import { LoginScreen } from '../LoginScreen';
 //Import all the screens
 
 
-import Screen1 from './Pages/Screen1';
+import {Verification} from './Pages/Dashboard';
 import Screen2 from './Pages/Screen2';
 import Screen3 from './Pages/Screen3';
 import Screen4 from './Pages/Screen4';
@@ -62,7 +62,7 @@ class NavigationDrawerStructure extends Component {
 const FirstActivity_StackNavigator = createStackNavigator({
     //All the screen from the First Option will be indexed here
     First: {
-        screen: Screen1,
+        screen: Verification,
         navigationOptions: ({ navigation }) => ({
             title: 'Dashboard',
 

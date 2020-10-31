@@ -5,12 +5,12 @@ var Schema = mongoose.Schema;
 
 const userProfile = new mongoose.Schema({
 
-    fullName:{
+    OrganizationDetail:{
+
+     fullName:{
         type:String,
         required: true
     },
-
-    OrganizationDetail:{
         
         organization_id:{
              type:String,
@@ -45,13 +45,17 @@ const userProfile = new mongoose.Schema({
         color:{
             type: String,
             required: true
+        },
+        capacity:{
+            type: Number,
+            required: true
         }
     },
 
     role:{
          type: String,
          required: true,
-        default:"driver"
+         default:"driver"
     },
 
     verified:{

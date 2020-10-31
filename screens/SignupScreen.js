@@ -40,9 +40,9 @@ export const SignupScreen = (props) => {
      .then(async (data)=>{
             try {
               await AsyncStorage.setItem('token',data.token)
-              props.navigation.replace("home")
+              //props.navigation.replace("userdetail")
             } catch (e) {
-              console.log("error hai",e)
+              console.log("error found",e)
             }
      })
   }
